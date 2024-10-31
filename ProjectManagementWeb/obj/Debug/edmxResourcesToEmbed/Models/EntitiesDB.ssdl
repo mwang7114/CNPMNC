@@ -1,0 +1,403 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="QL_DAModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="DuAn">
+    <Key>
+      <PropertyRef Name="DuAnID" />
+    </Key>
+    <Property Name="DuAnID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TenDuAn" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="NgayBatDau" Type="datetime" Nullable="false" />
+    <Property Name="NgayKetThuc" Type="datetime" />
+    <Property Name="NganSach" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="MauGradient" Type="nvarchar" MaxLength="255" />
+    <Property Name="QuyenXem" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="IsStarred" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="LichSuNhiemVu">
+    <Key>
+      <PropertyRef Name="LichSuID" />
+    </Key>
+    <Property Name="LichSuID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NhiemVuID" Type="int" Nullable="false" />
+    <Property Name="NguoiThayDoiID" Type="int" Nullable="false" />
+    <Property Name="MoTaThayDoi" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="NgayThayDoi" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="NganSach">
+    <Key>
+      <PropertyRef Name="NganSachID" />
+    </Key>
+    <Property Name="NganSachID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DuAnID" Type="int" Nullable="false" />
+    <Property Name="SoTien" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="TenDuAn" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="NgayCapNhat" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="NguoiDung">
+    <Key>
+      <PropertyRef Name="NguoiDungID" />
+    </Key>
+    <Property Name="NguoiDungID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TenDangNhap" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="MatKhau" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="HoTen" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="Email" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="VaiTro" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="NgayTao" Type="datetime" Nullable="false" />
+    <Property Name="LanDangNhapCuoi" Type="datetime" />
+  </EntityType>
+  <EntityType Name="NhiemVu">
+    <Key>
+      <PropertyRef Name="NhiemVuID" />
+    </Key>
+    <Property Name="NhiemVuID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DuAnID" Type="int" Nullable="false" />
+    <Property Name="NguoiDuocGiaoID" Type="int" Nullable="false" />
+    <Property Name="TenNhiemVu" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="MoTa" Type="nvarchar" MaxLength="255" />
+    <Property Name="TrangThai" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="NgayTao" Type="datetime" Nullable="false" />
+    <Property Name="HanHoanThanh" Type="datetime" />
+  </EntityType>
+  <EntityType Name="PhanHoi">
+    <Key>
+      <PropertyRef Name="PhanHoiID" />
+    </Key>
+    <Property Name="PhanHoiID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DuAnID" Type="int" Nullable="false" />
+    <Property Name="NguoiDungID" Type="int" Nullable="false" />
+    <Property Name="NoiDungPhanHoi" Type="nvarchar" MaxLength="300" Nullable="false" />
+    <Property Name="NgayPhanHoi" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PhanTichRuiRo">
+    <Key>
+      <PropertyRef Name="RuiRoID" />
+    </Key>
+    <Property Name="RuiRoID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DuAnID" Type="int" Nullable="false" />
+    <Property Name="MoTaRuiRo" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="MucDoRuiRo" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="NgayTao" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="QuyenTruyCap">
+    <Key>
+      <PropertyRef Name="QuyenTruyCapID" />
+    </Key>
+    <Property Name="QuyenTruyCapID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DuAnID" Type="int" Nullable="false" />
+    <Property Name="NguoiDungID" Type="int" Nullable="false" />
+    <Property Name="CapQuyen" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Sprint">
+    <Key>
+      <PropertyRef Name="SprintID" />
+    </Key>
+    <Property Name="SprintID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DuAnID" Type="int" Nullable="false" />
+    <Property Name="TenSprint" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="NgayBatDau" Type="datetime" Nullable="false" />
+    <Property Name="NgayKetThuc" Type="datetime" />
+  </EntityType>
+  <EntityType Name="TaiLieu">
+    <Key>
+      <PropertyRef Name="TaiLieuID" />
+    </Key>
+    <Property Name="TaiLieuID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DuAnID" Type="int" Nullable="false" />
+    <Property Name="TenFile" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="DuongDan" Type="text" Nullable="false" />
+    <Property Name="NgayTaiLen" Type="datetime" Nullable="false" />
+    <Property Name="NguoiTaiLenID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ThanhVienDuAn">
+    <Key>
+      <PropertyRef Name="DuAnID" />
+      <PropertyRef Name="NguoiDungID" />
+    </Key>
+    <Property Name="DuAnID" Type="int" Nullable="false" />
+    <Property Name="NguoiDungID" Type="int" Nullable="false" />
+    <Property Name="VaiTro" Type="nvarchar" MaxLength="50" />
+    <Property Name="NgayThamGia" Type="datetime" Nullable="false" />
+    <Property Name="NgayKetThuc" Type="datetime" />
+  </EntityType>
+  <EntityType Name="ThongBao">
+    <Key>
+      <PropertyRef Name="ThongBaoID" />
+    </Key>
+    <Property Name="ThongBaoID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NguoiDungID" Type="int" Nullable="false" />
+    <Property Name="NoiDung" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="DaXem" Type="bit" Nullable="false" />
+    <Property Name="NgayGui" Type="datetime" Nullable="false" />
+  </EntityType>
+  <Association Name="FK__LichSuNhi__Nguoi__5812160E">
+    <End Role="NguoiDung" Type="Self.NguoiDung" Multiplicity="1" />
+    <End Role="LichSuNhiemVu" Type="Self.LichSuNhiemVu" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="NguoiDung">
+        <PropertyRef Name="NguoiDungID" />
+      </Principal>
+      <Dependent Role="LichSuNhiemVu">
+        <PropertyRef Name="NguoiThayDoiID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__LichSuNhi__Nhiem__571DF1D5">
+    <End Role="NhiemVu" Type="Self.NhiemVu" Multiplicity="1" />
+    <End Role="LichSuNhiemVu" Type="Self.LichSuNhiemVu" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="NhiemVu">
+        <PropertyRef Name="NhiemVuID" />
+      </Principal>
+      <Dependent Role="LichSuNhiemVu">
+        <PropertyRef Name="NhiemVuID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__NganSach__DuAnID__4E88ABD4">
+    <End Role="DuAn" Type="Self.DuAn" Multiplicity="1" />
+    <End Role="NganSach" Type="Self.NganSach" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DuAn">
+        <PropertyRef Name="DuAnID" />
+      </Principal>
+      <Dependent Role="NganSach">
+        <PropertyRef Name="DuAnID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__NhiemVu__DuAnID__3E52440B">
+    <End Role="DuAn" Type="Self.DuAn" Multiplicity="1" />
+    <End Role="NhiemVu" Type="Self.NhiemVu" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DuAn">
+        <PropertyRef Name="DuAnID" />
+      </Principal>
+      <Dependent Role="NhiemVu">
+        <PropertyRef Name="DuAnID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__NhiemVu__NguoiDu__3F466844">
+    <End Role="NguoiDung" Type="Self.NguoiDung" Multiplicity="1" />
+    <End Role="NhiemVu" Type="Self.NhiemVu" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="NguoiDung">
+        <PropertyRef Name="NguoiDungID" />
+      </Principal>
+      <Dependent Role="NhiemVu">
+        <PropertyRef Name="NguoiDuocGiaoID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__PhanHoi__DuAnID__52593CB8">
+    <End Role="DuAn" Type="Self.DuAn" Multiplicity="1" />
+    <End Role="PhanHoi" Type="Self.PhanHoi" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DuAn">
+        <PropertyRef Name="DuAnID" />
+      </Principal>
+      <Dependent Role="PhanHoi">
+        <PropertyRef Name="DuAnID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__PhanHoi__NguoiDu__534D60F1">
+    <End Role="NguoiDung" Type="Self.NguoiDung" Multiplicity="1" />
+    <End Role="PhanHoi" Type="Self.PhanHoi" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="NguoiDung">
+        <PropertyRef Name="NguoiDungID" />
+      </Principal>
+      <Dependent Role="PhanHoi">
+        <PropertyRef Name="NguoiDungID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__PhanTichR__DuAnI__656C112C">
+    <End Role="DuAn" Type="Self.DuAn" Multiplicity="1" />
+    <End Role="PhanTichRuiRo" Type="Self.PhanTichRuiRo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DuAn">
+        <PropertyRef Name="DuAnID" />
+      </Principal>
+      <Dependent Role="PhanTichRuiRo">
+        <PropertyRef Name="DuAnID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__QuyenTruy__DuAnI__4222D4EF">
+    <End Role="DuAn" Type="Self.DuAn" Multiplicity="1" />
+    <End Role="QuyenTruyCap" Type="Self.QuyenTruyCap" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DuAn">
+        <PropertyRef Name="DuAnID" />
+      </Principal>
+      <Dependent Role="QuyenTruyCap">
+        <PropertyRef Name="DuAnID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__QuyenTruy__Nguoi__4316F928">
+    <End Role="NguoiDung" Type="Self.NguoiDung" Multiplicity="1" />
+    <End Role="QuyenTruyCap" Type="Self.QuyenTruyCap" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="NguoiDung">
+        <PropertyRef Name="NguoiDungID" />
+      </Principal>
+      <Dependent Role="QuyenTruyCap">
+        <PropertyRef Name="NguoiDungID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Sprint__DuAnID__4AB81AF0">
+    <End Role="DuAn" Type="Self.DuAn" Multiplicity="1" />
+    <End Role="Sprint" Type="Self.Sprint" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DuAn">
+        <PropertyRef Name="DuAnID" />
+      </Principal>
+      <Dependent Role="Sprint">
+        <PropertyRef Name="DuAnID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__TaiLieu__DuAnID__60A75C0F">
+    <End Role="DuAn" Type="Self.DuAn" Multiplicity="1" />
+    <End Role="TaiLieu" Type="Self.TaiLieu" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DuAn">
+        <PropertyRef Name="DuAnID" />
+      </Principal>
+      <Dependent Role="TaiLieu">
+        <PropertyRef Name="DuAnID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__TaiLieu__NguoiTa__619B8048">
+    <End Role="NguoiDung" Type="Self.NguoiDung" Multiplicity="1" />
+    <End Role="TaiLieu" Type="Self.TaiLieu" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="NguoiDung">
+        <PropertyRef Name="NguoiDungID" />
+      </Principal>
+      <Dependent Role="TaiLieu">
+        <PropertyRef Name="NguoiTaiLenID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ThanhVien__DuAnI__46E78A0C">
+    <End Role="DuAn" Type="Self.DuAn" Multiplicity="1" />
+    <End Role="ThanhVienDuAn" Type="Self.ThanhVienDuAn" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DuAn">
+        <PropertyRef Name="DuAnID" />
+      </Principal>
+      <Dependent Role="ThanhVienDuAn">
+        <PropertyRef Name="DuAnID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ThanhVien__Nguoi__47DBAE45">
+    <End Role="NguoiDung" Type="Self.NguoiDung" Multiplicity="1" />
+    <End Role="ThanhVienDuAn" Type="Self.ThanhVienDuAn" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="NguoiDung">
+        <PropertyRef Name="NguoiDungID" />
+      </Principal>
+      <Dependent Role="ThanhVienDuAn">
+        <PropertyRef Name="NguoiDungID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ThongBao__NguoiD__5CD6CB2B">
+    <End Role="NguoiDung" Type="Self.NguoiDung" Multiplicity="1" />
+    <End Role="ThongBao" Type="Self.ThongBao" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="NguoiDung">
+        <PropertyRef Name="NguoiDungID" />
+      </Principal>
+      <Dependent Role="ThongBao">
+        <PropertyRef Name="NguoiDungID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="QL_DAModelStoreContainer">
+    <EntitySet Name="DuAn" EntityType="Self.DuAn" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LichSuNhiemVu" EntityType="Self.LichSuNhiemVu" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="NganSach" EntityType="Self.NganSach" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="NguoiDung" EntityType="Self.NguoiDung" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="NhiemVu" EntityType="Self.NhiemVu" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PhanHoi" EntityType="Self.PhanHoi" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PhanTichRuiRo" EntityType="Self.PhanTichRuiRo" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="QuyenTruyCap" EntityType="Self.QuyenTruyCap" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Sprint" EntityType="Self.Sprint" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TaiLieu" EntityType="Self.TaiLieu" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ThanhVienDuAn" EntityType="Self.ThanhVienDuAn" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ThongBao" EntityType="Self.ThongBao" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__LichSuNhi__Nguoi__5812160E" Association="Self.FK__LichSuNhi__Nguoi__5812160E">
+      <End Role="NguoiDung" EntitySet="NguoiDung" />
+      <End Role="LichSuNhiemVu" EntitySet="LichSuNhiemVu" />
+    </AssociationSet>
+    <AssociationSet Name="FK__LichSuNhi__Nhiem__571DF1D5" Association="Self.FK__LichSuNhi__Nhiem__571DF1D5">
+      <End Role="NhiemVu" EntitySet="NhiemVu" />
+      <End Role="LichSuNhiemVu" EntitySet="LichSuNhiemVu" />
+    </AssociationSet>
+    <AssociationSet Name="FK__NganSach__DuAnID__4E88ABD4" Association="Self.FK__NganSach__DuAnID__4E88ABD4">
+      <End Role="DuAn" EntitySet="DuAn" />
+      <End Role="NganSach" EntitySet="NganSach" />
+    </AssociationSet>
+    <AssociationSet Name="FK__NhiemVu__DuAnID__3E52440B" Association="Self.FK__NhiemVu__DuAnID__3E52440B">
+      <End Role="DuAn" EntitySet="DuAn" />
+      <End Role="NhiemVu" EntitySet="NhiemVu" />
+    </AssociationSet>
+    <AssociationSet Name="FK__NhiemVu__NguoiDu__3F466844" Association="Self.FK__NhiemVu__NguoiDu__3F466844">
+      <End Role="NguoiDung" EntitySet="NguoiDung" />
+      <End Role="NhiemVu" EntitySet="NhiemVu" />
+    </AssociationSet>
+    <AssociationSet Name="FK__PhanHoi__DuAnID__52593CB8" Association="Self.FK__PhanHoi__DuAnID__52593CB8">
+      <End Role="DuAn" EntitySet="DuAn" />
+      <End Role="PhanHoi" EntitySet="PhanHoi" />
+    </AssociationSet>
+    <AssociationSet Name="FK__PhanHoi__NguoiDu__534D60F1" Association="Self.FK__PhanHoi__NguoiDu__534D60F1">
+      <End Role="NguoiDung" EntitySet="NguoiDung" />
+      <End Role="PhanHoi" EntitySet="PhanHoi" />
+    </AssociationSet>
+    <AssociationSet Name="FK__PhanTichR__DuAnI__656C112C" Association="Self.FK__PhanTichR__DuAnI__656C112C">
+      <End Role="DuAn" EntitySet="DuAn" />
+      <End Role="PhanTichRuiRo" EntitySet="PhanTichRuiRo" />
+    </AssociationSet>
+    <AssociationSet Name="FK__QuyenTruy__DuAnI__4222D4EF" Association="Self.FK__QuyenTruy__DuAnI__4222D4EF">
+      <End Role="DuAn" EntitySet="DuAn" />
+      <End Role="QuyenTruyCap" EntitySet="QuyenTruyCap" />
+    </AssociationSet>
+    <AssociationSet Name="FK__QuyenTruy__Nguoi__4316F928" Association="Self.FK__QuyenTruy__Nguoi__4316F928">
+      <End Role="NguoiDung" EntitySet="NguoiDung" />
+      <End Role="QuyenTruyCap" EntitySet="QuyenTruyCap" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Sprint__DuAnID__4AB81AF0" Association="Self.FK__Sprint__DuAnID__4AB81AF0">
+      <End Role="DuAn" EntitySet="DuAn" />
+      <End Role="Sprint" EntitySet="Sprint" />
+    </AssociationSet>
+    <AssociationSet Name="FK__TaiLieu__DuAnID__60A75C0F" Association="Self.FK__TaiLieu__DuAnID__60A75C0F">
+      <End Role="DuAn" EntitySet="DuAn" />
+      <End Role="TaiLieu" EntitySet="TaiLieu" />
+    </AssociationSet>
+    <AssociationSet Name="FK__TaiLieu__NguoiTa__619B8048" Association="Self.FK__TaiLieu__NguoiTa__619B8048">
+      <End Role="NguoiDung" EntitySet="NguoiDung" />
+      <End Role="TaiLieu" EntitySet="TaiLieu" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ThanhVien__DuAnI__46E78A0C" Association="Self.FK__ThanhVien__DuAnI__46E78A0C">
+      <End Role="DuAn" EntitySet="DuAn" />
+      <End Role="ThanhVienDuAn" EntitySet="ThanhVienDuAn" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ThanhVien__Nguoi__47DBAE45" Association="Self.FK__ThanhVien__Nguoi__47DBAE45">
+      <End Role="NguoiDung" EntitySet="NguoiDung" />
+      <End Role="ThanhVienDuAn" EntitySet="ThanhVienDuAn" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ThongBao__NguoiD__5CD6CB2B" Association="Self.FK__ThongBao__NguoiD__5CD6CB2B">
+      <End Role="NguoiDung" EntitySet="NguoiDung" />
+      <End Role="ThongBao" EntitySet="ThongBao" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

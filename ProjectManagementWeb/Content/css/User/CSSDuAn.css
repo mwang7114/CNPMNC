@@ -1,0 +1,321 @@
+﻿.main-content-home {
+    margin-left: 17px;
+    padding: 20px;
+}
+
+.workspace-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 30px;
+    margin-top: 20px;
+    border-bottom: 1px solid #9C9C9C; /* Sửa lại phần border-bottom */
+    margin-bottom: 30px;
+}
+
+    .workspace-header .left {
+        display: flex;
+        align-items: center;
+    }
+
+        .workspace-header .left img {
+            width: 40px;
+            height: 40px;
+            margin-right: 10px;
+        }
+
+        .workspace-header .left h2 {
+            margin: 0;
+            font-size: 34px;
+        }
+
+    .workspace-header .right button {
+        background-color: #43A047;
+        color: #e4e6eb;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+        .workspace-header .right button:hover {
+            background-color: #388E3C;
+        }
+
+.board-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+    .board-section select, .board-section input {
+        background-color: #1c1e21;
+        color: #9c9c9c;
+        border: 1px solid #9c9c9c; /* Sửa lại phần border */
+        padding: 10px;
+        border-radius: 5px;
+    }
+
+    .board-section select {
+        margin-right: 20px;
+        cursor: pointer;
+    }
+
+    .board-section input {
+        width: 260px;
+    }
+
+.boards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Tạo 4 cột với kích thước bằng nhau */
+    gap: 20px; /* Khoảng cách giữa các dự án */
+    margin-top: 20px;
+}
+
+.board {
+    position: relative;
+    background-color: #3a3b3c;
+    color: #e4e6eb;
+    padding: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 280px;
+    height: 130px;
+    transition: background 0.3s ease;
+    overflow: hidden;
+}
+
+    .board:hover::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(50, 50, 50, 0.3); /* Lớp phủ xám nhẹ khi hover */
+        border-radius: 5px;
+    }
+
+    .board.create {
+        background-color: #43A047;
+        align-content: center;
+        text-align: center;
+        font-size: 20px;
+    }
+
+        .board.create:hover {
+            background-color: #388E3C;
+        }
+
+/* CSS cho modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.modal-content {
+    background-color: #1e1e1e;
+    color: #fff;
+    margin: auto;
+    padding: 25px;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 450px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    animation: fadeIn 0.3s ease;
+    font-family: Arial, sans-serif;
+    position: relative; /* Thêm thuộc tính này để định vị nút đóng */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* CSS cho nút đóng */
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    cursor: pointer;
+    color: #999;
+    font-weight: bold;
+    transition: color 0.2s;
+}
+
+    .close:hover {
+        color: #ff4c4c; /* Màu đỏ khi hover để dễ nhận biết */
+    }
+
+.modal {
+    max-height: 100vh; /* Giới hạn chiều cao tối đa của modal */
+    overflow-y: auto; /* Thêm khả năng cuộn dọc */
+}
+
+.modal h2 {
+    font-size: 22px;
+    margin-bottom: 10px;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+.modal p {
+    font-size: 15px;
+    margin-bottom: 10px;
+    color: #bbb;
+}
+
+/* Xem trước nền */
+.background-preview {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.background-sample {
+    width: 180px;
+    height: 100px;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    background: linear-gradient(90deg, #56ab2f, #a8e063);
+    border-radius: 8px;
+    padding: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.card-sample {
+    width: 35px;
+    height: 60px;
+    background-color: rgba(255, 255, 255, 0.85);
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Các lựa chọn màu */
+.background-options {
+    display: flex;
+    gap: 8px;
+    margin-top: 15px;
+}
+
+.color-sample {
+    width: 32px;
+    height: 32px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+    .color-sample:hover {
+        transform: scale(1.1);
+        box-shadow: 0 0 6px rgba(255, 255, 255, 0.4);
+    }
+
+/* Nhãn và ô nhập liệu */
+label {
+    font-size: 14px;
+    margin-top: 15px;
+    color: #ccc;
+    display: block;
+}
+
+input[type="text"], select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 6px;
+    border: none;
+    background-color: #2e2e2e;
+    color: #ddd;
+    font-size: 14px;
+    box-sizing: border-box;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+    input[type="text"]:focus, select:focus {
+        outline: none;
+        background-color: #3a3a3a;
+    }
+
+/* Nút tạo dự án */
+#createProjectConfirm {
+    width: 100%;
+    padding: 12px;
+    margin-top: 20px;
+    border-radius: 8px;
+    border: none;
+    background-color: #28a745;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.1s;
+}
+
+    #createProjectConfirm:hover {
+        background-color: #218838;
+        transform: scale(1.02); /* Tăng nhẹ kích thước khi hover */
+    }
+
+
+/* Hàng chứa ngày bắt đầu và ngày kết thúc */
+.date-fields {
+    display: flex;
+    gap: 10px; /* Khoảng cách giữa hai trường */
+}
+
+    /* Chỉnh sửa các trường nhập ngày và số (ngày bắt đầu, ngày kết thúc, ngân sách) */
+    .date-fields input[type="date"], input[type="number"] {
+        width: 100%; /* Đảm bảo các trường ngày bắt đầu và kết thúc chia đều không gian */
+        padding: 10px;
+        margin-top: 5px;
+        border-radius: 6px;
+        border: none;
+        background-color: #2e2e2e;
+        color: #ddd;
+        font-size: 14px;
+        box-sizing: border-box;
+        transition: background-color 0.2s, color 0.2s;
+    }
+
+        input[type="date"]:focus, input[type="number"]:focus {
+            outline: none;
+            background-color: #3a3a3a;
+        }
+
+/* Nhãn cho các trường ngày bắt đầu, kết thúc và ngân sách */
+label[for="startDate"], label[for="endDate"], label[for="budget"] {
+    font-size: 14px;
+    color: #ccc;
+    display: block;
+    margin-top: 15px; /* Thêm khoảng cách giữa các nhóm trường */
+}
+
+/* Căn chỉnh nhãn với tất cả các trường nhập liệu */
+label {
+    font-size: 14px;
+    color: #ccc;
+    display: block;
+}
+
+/* Điều chỉnh nội dung modal */
+.modal-content {
+    padding-bottom: 30px;
+    max-width: 430px; /* Giới hạn chiều rộng của modal */
+    margin: auto; /* Căn giữa modal */
+}

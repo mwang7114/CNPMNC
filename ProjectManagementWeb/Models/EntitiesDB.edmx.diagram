@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="ccac1aaeadb34caba71b2a1be3a10353" Name="Diagram1">
+        <EntityTypeShape EntityType="QL_DAModel.DuAn" Width="1.5" PointX="0.75" PointY="12.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="QL_DAModel.LichSuNhiemVu" Width="1.5" PointX="8.25" PointY="14" IsExpanded="true" />
+        <EntityTypeShape EntityType="QL_DAModel.NganSach" Width="1.5" PointX="3" PointY="10.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="QL_DAModel.NguoiDung" Width="1.5" PointX="0.75" PointY="6.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="QL_DAModel.NhiemVu" Width="1.5" PointX="3" PointY="13.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="QL_DAModel.PhanHoi" Width="1.5" PointX="6" PointY="13" IsExpanded="true" />
+        <EntityTypeShape EntityType="QL_DAModel.PhanTichRuiRo" Width="1.5" PointX="3" PointY="20.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="QL_DAModel.QuyenTruyCap" Width="1.5" PointX="6" PointY="10.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="QL_DAModel.Sprint" Width="1.5" PointX="3" PointY="26" IsExpanded="true" />
+        <EntityTypeShape EntityType="QL_DAModel.TaiLieu" Width="1.5" PointX="6" PointY="17" IsExpanded="true" />
+        <EntityTypeShape EntityType="QL_DAModel.ThanhVienDuAn" Width="1.5" PointX="3" PointY="7" IsExpanded="true" />
+        <EntityTypeShape EntityType="QL_DAModel.ThongBao" Width="1.5" PointX="3" PointY="3.125" IsExpanded="true" />
+        <AssociationConnector Association="QL_DAModel.FK__NganSach__DuAnID__4E88ABD4" ManuallyRouted="false" />
+        <AssociationConnector Association="QL_DAModel.FK__NhiemVu__DuAnID__3E52440B" ManuallyRouted="false" />
+        <AssociationConnector Association="QL_DAModel.FK__PhanHoi__DuAnID__52593CB8" ManuallyRouted="false" />
+        <AssociationConnector Association="QL_DAModel.FK__PhanTichR__DuAnI__656C112C" ManuallyRouted="false" />
+        <AssociationConnector Association="QL_DAModel.FK__QuyenTruy__DuAnI__4222D4EF" ManuallyRouted="false" />
+        <AssociationConnector Association="QL_DAModel.FK__Sprint__DuAnID__4AB81AF0" ManuallyRouted="false" />
+        <AssociationConnector Association="QL_DAModel.FK__TaiLieu__DuAnID__60A75C0F" ManuallyRouted="false" />
+        <AssociationConnector Association="QL_DAModel.FK__ThanhVien__DuAnI__46E78A0C" ManuallyRouted="false" />
+        <AssociationConnector Association="QL_DAModel.FK__LichSuNhi__Nguoi__5812160E" ManuallyRouted="false" />
+        <AssociationConnector Association="QL_DAModel.FK__LichSuNhi__Nhiem__571DF1D5" ManuallyRouted="false" />
+        <AssociationConnector Association="QL_DAModel.FK__NhiemVu__NguoiDu__3F466844" ManuallyRouted="false" />
+        <AssociationConnector Association="QL_DAModel.FK__PhanHoi__NguoiDu__534D60F1" ManuallyRouted="false" />
+        <AssociationConnector Association="QL_DAModel.FK__QuyenTruy__Nguoi__4316F928" ManuallyRouted="false" />
+        <AssociationConnector Association="QL_DAModel.FK__TaiLieu__NguoiTa__619B8048" ManuallyRouted="false" />
+        <AssociationConnector Association="QL_DAModel.FK__ThanhVien__Nguoi__47DBAE45" ManuallyRouted="false" />
+        <AssociationConnector Association="QL_DAModel.FK__ThongBao__NguoiD__5CD6CB2B" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

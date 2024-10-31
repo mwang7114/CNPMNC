@@ -1,0 +1,119 @@
+﻿@{
+    ViewBag.Title = "Home";
+    Layout = "~/Views/Shared/_LayoutUser.cshtml";
+    <link href="~/Content/css/User/CSSDuAn.css" rel="stylesheet" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+}
+
+<div class="main-content-home">
+    <div class="workspace-header">
+        <div class="left">
+            <img alt="Workspace Icon" height="40" src="~/Content/images/workspace.png" width="40" />
+            <h2>Không gian làm việc</h2>
+        </div>
+        <div class="right">
+            <button>Mời các thành viên tham gia không gian làm việc</button>
+        </div>
+    </div>
+    <p style="margin-bottom:20px;font-size:25px">Dự án</p>
+
+    <div class="board-section">
+        <div class="left">
+            <p style="margin-bottom:10px;font-size:14px">Sắp xếp theo</p>
+            <select id="sortOrder" onchange="sortProjects()">
+                <option value="recent">Hoạt động gần đây nhất</option>
+                <option value="az">Theo bảng chữ cái A-Z</option>
+                <option value="za">Theo bảng chữ cái Z-A</option>
+            </select>
+
+            <script>
+                document.addEventListener("DOMContentLoaded", function () {
+                    // Lấy giá trị sortOrder từ Razor (giá trị hiện tại)
+                    let currentSortOrder = '@ViewBag.SortOrder';
+
+                    // Thiết lập giá trị cho select khi trang tải
+                    document.getElementById('sortOrder').value = currentSortOrder;
+                });
+
+                // Hàm xử lý sự kiện thay đổi sắp xếp
+                function sortProjects() {
+                    let sortOrder = document.getElementById('sortOrder').value;
+                    window.location.href = '@Url.Action("DuAn", "User")?sortOrder=' + sortOrder;
+                }
+            </script>
+        </div>
+        <div class="right">
+            <p style="margin-bottom:10px;font-size:14px">Tìm kiếm</p>
+            <input placeholder="Tìm kiếm các bảng" type="text" />
+        </div>
+    </div>
+    <div class="boards">
+        <div class="board create" id="createProjectBtn">Tạo dự án mới</div>
+        @foreach (var duAn in Model)
+        {
+            <div class="board" style="background: @duAn.MauGradient">
+                <h3 style="font-weight:bold">@duAn.TenDuAn</h3>
+            </div>
+        }
+    </div>
+</div>
+
+<div id="createProjectModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span> <!-- Nút đóng modal -->
+        <h2>Tạo dự án</h2>
+
+        <!-- Chọn hình nền -->
+        <p>Phông nền</p>
+        <div class="background-preview">
+            <div id="backgroundSample" class="background-sample">
+                <div class="card-sample" style="height: 80px;"></div>
+                <div class="card-sample" style="height: 60px;"></div>
+                <div class="card-sample" style="height: 40px;"></div>
+            </div>
+        </div>
+        <div class="background-options">
+            <div class="color-sample" style="background: linear-gradient(90deg, #56ab2f, #a8e063);" onclick="changeBackgroundColor('linear-gradient(90deg, #56ab2f, #a8e063)')"></div>
+            <div class="color-sample" style="background: linear-gradient(90deg, #ff7e5f, #feb47b);" onclick="changeBackgroundColor('linear-gradient(90deg, #ff7e5f, #feb47b)')"></div>
+            <div class="color-sample" style="background: linear-gradient(90deg, #6a11cb, #2575fc);" onclick="changeBackgroundColor('linear-gradient(90deg, #6a11cb, #2575fc)')"></div>
+            <div class="color-sample" style="background: linear-gradient(90deg, #00c6ff, #0072ff);" onclick="changeBackgroundColor('linear-gradient(90deg, #00c6ff, #0072ff)')"></div>
+            <div class="color-sample" style="background: linear-gradient(90deg, #f2709c, #ff9472);" onclick="changeBackgroundColor('linear-gradient(90deg, #f2709c, #ff9472)')"></div>
+            <div class="color-sample" style="background: linear-gradient(90deg, #4b6cb7, #182848);" onclick="changeBackgroundColor('linear-gradient(90deg, #4b6cb7, #182848)')"></div>
+            <div class="color-sample" style="background: linear-gradient(90deg, #ffafbd, #ffc3a0);" onclick="changeBackgroundColor('linear-gradient(90deg, #ffafbd, #ffc3a0)')"></div>
+            <div class="color-sample" style="background: linear-gradient(90deg, #1a6b29, #86d9a0);" onclick="changeBackgroundColor('linear-gradient(90deg, #1a6b29, #86d9a0)')"></div>
+        </div>
+
+        <!-- Tiêu đề dự án -->
+        <label for="projectTitle">Tiêu đề dự án *</label>
+        <input type="text" id="projectTitle" placeholder="Nhập tiêu đề dự án">
+
+        <!--Ngày bắt đầu và kết thúc-->
+        <div class="date-fields">
+            <div>
+                <label for="startDate">Ngày bắt đầu</label>
+                <input type="date" id="startDate">
+            </div>
+            <div>
+                <label for="endDate">Ngày kết thúc</label>
+                <input type="date" id="endDate">
+            </div>
+        </div>
+
+        <!-- Ngân sách -->
+        <label for="budget">Ngân sách</label>
+        <input type="number" id="budget" placeholder="Nhập ngân sách dự án" min="0" step="1000">
+
+        <!-- Quyền xem -->
+        <label for="projectVisibility">Quyền xem</label>
+        <select id="projectVisibility" name="visibility">
+            <option value="Không gian làm việc" selected>Không gian làm việc</option>
+            <option value="Riêng tư">Riêng tư</option>
+            <option value="Công khai">Công khai</option>
+        </select>
+
+
+        <!-- Nút Tạo -->
+        <button id="createProjectConfirm">Tạo mới</button>
+    </div>
+</div>
+<script src="~/Content/JS/JSTaoDuAn.js"></script>

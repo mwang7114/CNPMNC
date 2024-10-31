@@ -1,0 +1,43 @@
+﻿
+@{
+    ViewBag.Title = "Login";
+    Layout = "~/Views/Shared/_LayoutRelog.cshtml";
+}
+
+    <div class="container">
+        <div class="logo">
+            <img src="~/Content/images/logo_syncmaster.png" alt="Logo">
+        </div>
+        <form>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="Nhập email của bạn">
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" placeholder="Nhập password của bạn">
+            </div>
+            <div class="form-group">
+                <button id="login">Đăng nhập</button>
+                <script>
+                    document.getElementById('login').addEventListener('click', function (event) {
+                        event.preventDefault();
+                        window.location.href = '/User/DuAn';
+                    });
+                </script>
+
+            </div>
+            <div style="text-align: center; color: #777777">
+                <p>Hoặc tiếp tục với:</p>
+            </div>
+            <div class="social-login">
+                <a href="#"><img src="~/Content/images/logofbb.png" alt="Facebook" style="width:30px"> Facebook</a>
+                <a href="#"><img src="~/Content/images/logogg.png" alt="Google" style="width:27px"> Google</a>
+            </div>
+            <div class="resetpassword">
+                <a href="@Url.Action("ForgotPass","Relog")">Bạn không đăng nhập được?</a>
+                <b>•</b>
+                <a href="@Url.Action("Register","Relog")">Tạo tài khoản</a>
+            </div>
+        </form>
+    </div>
