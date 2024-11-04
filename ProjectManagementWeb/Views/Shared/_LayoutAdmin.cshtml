@@ -37,7 +37,7 @@
         <div class="slidebar">
             <h4 class="text-center py-3">Admin Panel</h4>
             <a href="@Url.Action("HomeAdmin", "Admin")"><i class="bi bi-house-door"></i> Quản lý tổng quan</a>
-            <a href="@Url.Action("Index", "Project")"><i class="bi bi-folder"></i> Quản lý dự án</a>
+            <a href="@Url.Action("QLDuAn", "QLDA")"><i class="bi bi-folder"></i> Quản lý dự án</a>
             <a href="@Url.Action("Index", "Task")"><i class="bi bi-list-task"></i> Quản lý nhiệm vụ</a>
             <a href="@Url.Action("Index", "User")"><i class="bi bi-people"></i> Quản lý người dùng</a>
             <a href="@Url.Action("Index", "Report")"><i class="bi bi-bar-chart"></i> Báo cáo</a>
@@ -46,5 +46,7 @@
             @RenderBody()
         </div>
     </div>
+    @Scripts.Render("~/bundles/jquery")
+    @RenderSection("Scripts", required: false)
 </body>
 </html>

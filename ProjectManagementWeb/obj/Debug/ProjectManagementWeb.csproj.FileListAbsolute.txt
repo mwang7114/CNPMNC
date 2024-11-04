@@ -63,3 +63,7 @@ D:\IT\nam3\HK1\CNPMNC\WebQLDA\ProjectManagementWeb\ProjectManagementWeb\bin\Enti
 D:\IT\nam3\HK1\CNPMNC\WebQLDA\ProjectManagementWeb\ProjectManagementWeb\bin\EntityFramework.SqlServer.dll
 D:\IT\nam3\HK1\CNPMNC\WebQLDA\ProjectManagementWeb\ProjectManagementWeb\bin\EntityFramework.xml
 D:\IT\nam3\HK1\CNPMNC\WebQLDA\ProjectManagementWeb\ProjectManagementWeb\bin\EntityFramework.SqlServer.xml
+D:\IT\nam3\HK1\CNPMNC\WebQLDA\ProjectManagementWeb\ProjectManagementWeb\bin\PagedList.dll
+D:\IT\nam3\HK1\CNPMNC\WebQLDA\ProjectManagementWeb\ProjectManagementWeb\bin\PagedList.Mvc.dll
+D:\IT\nam3\HK1\CNPMNC\WebQLDA\ProjectManagementWeb\ProjectManagementWeb\bin\PagedList.xml
+D:\IT\nam3\HK1\CNPMNC\WebQLDA\ProjectManagementWeb\ProjectManagementWeb\bin\PagedList.Mvc.xml

@@ -1,0 +1,103 @@
+﻿@model ProjectManagementWeb.Models.DuAn
+
+@{
+    ViewBag.Title = "Thêm Dự Án";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2>Thêm Dự Án</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-group">
+        @Html.LabelFor(m => m.TenDuAn)
+        @Html.TextBoxFor(m => m.TenDuAn, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.TenDuAn)
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(m => m.NgayBatDau)
+        @Html.TextBoxFor(m => m.NgayBatDau, "{0:yyyy-MM-dd}", new { @class = "form-control", type = "date" })
+        @Html.ValidationMessageFor(m => m.NgayBatDau)
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(m => m.NgayKetThuc)
+        @Html.TextBoxFor(m => m.NgayKetThuc, "{0:yyyy-MM-dd}", new { @class = "form-control", type = "date" })
+        @Html.ValidationMessageFor(m => m.NgayKetThuc)
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(m => m.NganSach)
+        @Html.TextBoxFor(m => m.NganSach, new { @class = "form-control", type = "number", step = "1000" })
+        @Html.ValidationMessageFor(m => m.NganSach)
+    </div>
+
+    <div class="form-group">
+        <label>Màu Gradient</label>
+        <div class="color-samples">
+            @* Default selection for the gradient *@
+            <div class="color-sample selected" style="background: linear-gradient(90deg, #56ab2f, #a8e063);" onclick="changeBackgroundColor('linear-gradient(90deg, #56ab2f, #a8e063)', this)"></div>
+            <div class="color-sample" style="background: linear-gradient(90deg, #ff7e5f, #feb47b);" onclick="changeBackgroundColor('linear-gradient(90deg, #ff7e5f, #feb47b)', this)"></div>
+            <div class="color-sample" style="background: linear-gradient(90deg, #6a11cb, #2575fc);" onclick="changeBackgroundColor('linear-gradient(90deg, #6a11cb, #2575fc)', this)"></div>
+            <div class="color-sample" style="background: linear-gradient(90deg, #00c6ff, #0072ff);" onclick="changeBackgroundColor('linear-gradient(90deg, #00c6ff, #0072ff)', this)"></div>
+            <div class="color-sample" style="background: linear-gradient(90deg, #f2709c, #ff9472);" onclick="changeBackgroundColor('linear-gradient(90deg, #f2709c, #ff9472)', this)"></div>
+            <div class="color-sample" style="background: linear-gradient(90deg, #4b6cb7, #182848);" onclick="changeBackgroundColor('linear-gradient(90deg, #4b6cb7, #182848)', this)"></div>
+            <div class="color-sample" style="background: linear-gradient(90deg, #ffafbd, #ffc3a0);" onclick="changeBackgroundColor('linear-gradient(90deg, #ffafbd, #ffc3a0)', this)"></div>
+            <div class="color-sample" style="background: linear-gradient(90deg, #1a6b29, #86d9a0);" onclick="changeBackgroundColor('linear-gradient(90deg, #1a6b29, #86d9a0)', this)"></div>
+        </div>
+        @Html.HiddenFor(m => m.MauGradient, new { id = "MauGradient", Value = "linear-gradient(90deg, #56ab2f, #a8e063)" }) @* Set default value *@
+        @Html.ValidationMessageFor(m => m.MauGradient)
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(m => m.QuyenXem)
+        @Html.DropDownListFor(m => m.QuyenXem, new SelectList(new List<string> { "Riêng tư", "Công khai", "Không gian làm việc" }), "Chọn quyền xem", new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.QuyenXem)
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(m => m.IsStarred)
+        @Html.CheckBoxFor(m => m.IsStarred)
+    </div>
+    <div style="text-align: right;">
+        <button type="submit" class="btn btn-primary">Lưu lại</button>
+        @Html.ActionLink("Trở về", "QLDuAn", null, new { @class = "btn btn-secondary" })
+        </div>
+        }
+
+        @section Scripts {
+            <script>
+                function changeBackgroundColor(gradient, element) {
+                    document.getElementById("MauGradient").value = gradient;
+
+                    // Remove 'selected' class from all samples
+                    const samples = document.querySelectorAll('.color-sample');
+                    samples.forEach(sample => sample.classList.remove('selected'));
+
+                    // Add 'selected' class to the clicked sample
+                    element.classList.add('selected');
+                }
+            </script>
+            @Scripts.Render("~/bundles/jqueryval")
+        }
+        <style>
+            .color-samples {
+                display: flex;
+                gap: 10px;
+                margin-top: 10px;
+            }
+
+            .color-sample {
+                width: 40px;
+                height: 40px;
+                border-radius: 5px;
+                cursor: pointer;
+            }
+
+                .color-sample.selected {
+                    border: 2px solid #000; /* Border color for selected sample */
+                }
+        </style>

@@ -1,18 +1,39 @@
 ﻿body {
-    margin: 0px;
+    margin: 0;
 }
+
 .custom-navbar {
     background-color: #43A047;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
 }
-.content{
-    display:flex;
-    min-height:100vh
+
+
+.content {
+    display: flex;
 }
+
 .slidebar {
-    width: 250px;
+    width: 200px;
     background-color: #343a40;
     color: white;
+    position: fixed;
+    height: 84.4vh;
 }
+
+.main-content {
+    margin-left: 200px;
+    padding: 20px;
+    height: 84.4vh;
+    background-color: white;
+    overflow-y: auto;
+    max-width: 1300px;
+    width: calc(100% - 200px);
+}
+
+
 
     .slidebar a {
         color: white;
@@ -21,36 +42,16 @@
         display: block;
     }
 
-.slidebar a:hover {
-    background-color: #495057;
-}
-
-.main-content {
-    width: 90%;
-    height: auto;
-    background-color: white;
-}
-
-/*.txtSearch {
-    float:right;
-    margin-right:50px;
-    margin-top:8px;
-}
-
-.txtsearch {
-    width: 200px;
-    border-radius: 7px;
-    text-align:center;
-    height:37px;
-}*/
+        .slidebar a:hover {
+            background-color: #495057;
+        }
 
 
-.fm-link-menu a{
+.fm-link-menu a {
     text-decoration: none;
     font-size: 30px;
     color: black;
 }
-
 
 .item {
     padding-top: 50px;
@@ -59,22 +60,24 @@
     margin-left: 50px;
 }
 
-
 .fm-link {
     margin-left: 37px;
     text-decoration: none;
     color: seagreen;
     font-weight: bold;
 }
+
 .btn-link {
     text-decoration: none;
 }
-.form-group{
-    margin-left:8%;
+
+.form-group {
+    margin-left: 8%;
 }
-.btn-back{
-    margin-left:8%;
-    text-decoration:none;
+
+.btn-back {
+    margin-left: 8%;
+    text-decoration: none;
 }
 
 .log-out {
@@ -96,7 +99,5 @@
     .log-out:hover {
         background-color: #34c9eb;
         color: #ffffff;
-        text-decoration:none
+        text-decoration: none;
     }
-
-

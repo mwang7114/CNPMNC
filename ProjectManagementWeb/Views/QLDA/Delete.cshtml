@@ -1,0 +1,42 @@
+﻿@model ProjectManagementWeb.Models.DuAn
+
+@{
+    ViewBag.Title = "Xóa Dự Án";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2>Xóa Dự Án</h2>
+
+<h3>Bạn có chắc chắn muốn xóa dự án này không?</h3>
+<div>
+    <dl class="dl-horizontal">
+        <dt>Tên Dự Án</dt>
+        <dd>@Html.DisplayFor(model => model.TenDuAn)</dd>
+
+        <dt>Ngày Bắt Đầu</dt>
+        <dd>@Model.NgayBatDau.ToString("dd/MM/yyyy")</dd>
+
+        <dt>Ngày Kết Thúc</dt>
+        <dd>@(Model.NgayKetThuc.HasValue ? Model.NgayKetThuc.Value.ToString("dd/MM/yyyy") : "Không xác định")</dd>
+
+        <dt>Ngân Sách</dt>
+        <dd>@Html.DisplayFor(model => model.NganSach)</dd>
+
+        <dt>Màu Gradient</dt>
+        <dd>@Html.DisplayFor(model => model.MauGradient)</dd>
+
+        <dt>Quyền Xem</dt>
+        <dd>@Html.DisplayFor(model => model.QuyenXem)</dd>
+
+        <dt>Đánh Dấu Yêu Thích</dt>
+        <dd>@Html.DisplayFor(model => model.IsStarred)</dd>
+    </dl>
+    <div style="text-align: right;">
+        @using (Html.BeginForm("Delete", "QLDA", FormMethod.Post))
+        {
+            @Html.HiddenFor(model => model.DuAnID)
+            <button type="submit" class="btn btn-danger">Xóa</button>
+            @Html.ActionLink("Hủy", "QLDuAn", null, new { @class = "btn btn-secondary" })
+        }
+        </div>
+    </div>

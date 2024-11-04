@@ -1,0 +1,65 @@
+﻿@model PagedList.PagedList<ProjectManagementWeb.Models.DuAn>
+@using PagedList.Mvc;
+
+@{
+    ViewBag.Title = "Danh Sách Dự Án";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+    <link href="~/Content/css/Admin/CSSViewAdmin.css" rel="stylesheet" />
+}
+
+<h2>Danh Sách Dự Án</h2>
+
+<p>
+    @Html.ActionLink("Thêm Dự Án Mới", "Create", "QLDA", null, new { @class = "btn-add-project" })
+</p>
+
+<table class="table table-bordered table-hover">
+    <thead>
+        <tr>
+            <th>ID Dự Án</th>
+            <th>Tên Dự Án</th>
+            <th>Ngày Bắt Đầu</th>
+            <th>Ngày Kết Thúc</th>
+            <th>Ngân Sách</th>
+            <th>Quyền Xem</th>
+            <th>Yêu Thích</th>
+            <th>Màu Gradient</th>
+            <th>Hành Động</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.DuAnID</td>
+                <td>@item.TenDuAn</td>
+                <td>@item.NgayBatDau.ToString("dd/MM/yyyy")</td>
+                <td>@(item.NgayKetThuc.HasValue ? item.NgayKetThuc.Value.ToString("dd/MM/yyyy") : string.Empty)</td>
+                <td>@item.NganSach</td>
+                <td>@item.QuyenXem</td>
+                <td>@(item.IsStarred ? "Có" : "Không")</td>
+                <td style="text-align: center;">
+                    <div style="background: @item.MauGradient; color: white; height: 30px; width: 50px; border-radius: 5px; display: inline-block;"></div>
+                </td>
+                <td>
+                    <a href="@Url.Action("Edit", "QLDA", new { id = item.DuAnID })" class="btn btn-warning btn-sm">
+                        <i class="fa fa-edit"></i>
+                    </a>
+                    <a href="@Url.Action("Delete", "QLDA", new { id = item.DuAnID })" class="btn btn-danger btn-sm">
+                        <i class="fa fa-trash"></i>
+                    </a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<div class="pagination-container">
+    @Html.PagedListPager(Model, page => Url.Action("DuAn", new { page = page }), new PagedListRenderOptions
+    {
+        DisplayLinkToFirstPage = PagedListDisplayMode.Always,
+        DisplayLinkToLastPage = PagedListDisplayMode.Always,
+        DisplayLinkToPreviousPage = PagedListDisplayMode.Always,
+        DisplayLinkToNextPage = PagedListDisplayMode.Always
+    })
+</div>
