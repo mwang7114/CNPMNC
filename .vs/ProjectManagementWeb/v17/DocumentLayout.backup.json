@@ -3,40 +3,40 @@
   "WorkspaceRootPath": "D:\\IT\\nam3\\HK1\\CNPMNC\\WebQLDA\\ProjectManagementWeb\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{93BC2F54-ED7C-4AEE-B4EF-CED80C974510}|ProjectManagementWeb\\ProjectManagementWeb.csproj|d:\\it\\nam3\\hk1\\cnpmnc\\webqlda\\projectmanagementweb\\projectmanagementweb\\views\\user\\duan.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{93BC2F54-ED7C-4AEE-B4EF-CED80C974510}|ProjectManagementWeb\\ProjectManagementWeb.csproj|solutionrelative:projectmanagementweb\\views\\user\\duan.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{93BC2F54-ED7C-4AEE-B4EF-CED80C974510}|ProjectManagementWeb\\ProjectManagementWeb.csproj|d:\\it\\nam3\\hk1\\cnpmnc\\webqlda\\projectmanagementweb\\projectmanagementweb\\content\\js\\jstaoduan.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{93BC2F54-ED7C-4AEE-B4EF-CED80C974510}|ProjectManagementWeb\\ProjectManagementWeb.csproj|solutionrelative:projectmanagementweb\\content\\js\\jstaoduan.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{93BC2F54-ED7C-4AEE-B4EF-CED80C974510}|ProjectManagementWeb\\ProjectManagementWeb.csproj|d:\\it\\nam3\\hk1\\cnpmnc\\webqlda\\projectmanagementweb\\projectmanagementweb\\views\\qlda\\qlduan.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{93BC2F54-ED7C-4AEE-B4EF-CED80C974510}|ProjectManagementWeb\\ProjectManagementWeb.csproj|solutionrelative:projectmanagementweb\\views\\qlda\\qlduan.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{93BC2F54-ED7C-4AEE-B4EF-CED80C974510}|ProjectManagementWeb\\ProjectManagementWeb.csproj|d:\\it\\nam3\\hk1\\cnpmnc\\webqlda\\projectmanagementweb\\projectmanagementweb\\views\\qlda\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{93BC2F54-ED7C-4AEE-B4EF-CED80C974510}|ProjectManagementWeb\\ProjectManagementWeb.csproj|solutionrelative:projectmanagementweb\\views\\qlda\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{93BC2F54-ED7C-4AEE-B4EF-CED80C974510}|ProjectManagementWeb\\ProjectManagementWeb.csproj|d:\\it\\nam3\\hk1\\cnpmnc\\webqlda\\projectmanagementweb\\projectmanagementweb\\views\\relog\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{93BC2F54-ED7C-4AEE-B4EF-CED80C974510}|ProjectManagementWeb\\ProjectManagementWeb.csproj|solutionrelative:projectmanagementweb\\views\\relog\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{93BC2F54-ED7C-4AEE-B4EF-CED80C974510}|ProjectManagementWeb\\ProjectManagementWeb.csproj|d:\\it\\nam3\\hk1\\cnpmnc\\webqlda\\projectmanagementweb\\projectmanagementweb\\models\\duan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{93BC2F54-ED7C-4AEE-B4EF-CED80C974510}|ProjectManagementWeb\\ProjectManagementWeb.csproj|solutionrelative:projectmanagementweb\\models\\duan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{93BC2F54-ED7C-4AEE-B4EF-CED80C974510}|ProjectManagementWeb\\ProjectManagementWeb.csproj|d:\\it\\nam3\\hk1\\cnpmnc\\webqlda\\projectmanagementweb\\projectmanagementweb\\views\\qlda\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{93BC2F54-ED7C-4AEE-B4EF-CED80C974510}|ProjectManagementWeb\\ProjectManagementWeb.csproj|solutionrelative:projectmanagementweb\\views\\qlda\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{93BC2F54-ED7C-4AEE-B4EF-CED80C974510}|ProjectManagementWeb\\ProjectManagementWeb.csproj|d:\\it\\nam3\\hk1\\cnpmnc\\webqlda\\projectmanagementweb\\projectmanagementweb\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{93BC2F54-ED7C-4AEE-B4EF-CED80C974510}|ProjectManagementWeb\\ProjectManagementWeb.csproj|solutionrelative:projectmanagementweb\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{93BC2F54-ED7C-4AEE-B4EF-CED80C974510}|ProjectManagementWeb\\ProjectManagementWeb.csproj|d:\\it\\nam3\\hk1\\cnpmnc\\webqlda\\projectmanagementweb\\projectmanagementweb\\views\\qlda\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{93BC2F54-ED7C-4AEE-B4EF-CED80C974510}|ProjectManagementWeb\\ProjectManagementWeb.csproj|solutionrelative:projectmanagementweb\\views\\qlda\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{93BC2F54-ED7C-4AEE-B4EF-CED80C974510}|ProjectManagementWeb\\ProjectManagementWeb.csproj|d:\\it\\nam3\\hk1\\cnpmnc\\webqlda\\projectmanagementweb\\projectmanagementweb\\content\\css\\admin\\cssviewadmin.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{93BC2F54-ED7C-4AEE-B4EF-CED80C974510}|ProjectManagementWeb\\ProjectManagementWeb.csproj|solutionrelative:projectmanagementweb\\content\\css\\admin\\cssviewadmin.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{93BC2F54-ED7C-4AEE-B4EF-CED80C974510}|ProjectManagementWeb\\ProjectManagementWeb.csproj|d:\\it\\nam3\\hk1\\cnpmnc\\webqlda\\projectmanagementweb\\projectmanagementweb\\views\\shared\\_layoutadmin.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{93BC2F54-ED7C-4AEE-B4EF-CED80C974510}|ProjectManagementWeb\\ProjectManagementWeb.csproj|solutionrelative:projectmanagementweb\\views\\shared\\_layoutadmin.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{93BC2F54-ED7C-4AEE-B4EF-CED80C974510}|ProjectManagementWeb\\ProjectManagementWeb.csproj|d:\\it\\nam3\\hk1\\cnpmnc\\webqlda\\projectmanagementweb\\projectmanagementweb\\controllers\\relogcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{93BC2F54-ED7C-4AEE-B4EF-CED80C974510}|ProjectManagementWeb\\ProjectManagementWeb.csproj|solutionrelative:projectmanagementweb\\controllers\\relogcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{93BC2F54-ED7C-4AEE-B4EF-CED80C974510}|ProjectManagementWeb\\ProjectManagementWeb.csproj|d:\\it\\nam3\\hk1\\cnpmnc\\webqlda\\projectmanagementweb\\projectmanagementweb\\controllers\\qldacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{93BC2F54-ED7C-4AEE-B4EF-CED80C974510}|ProjectManagementWeb\\ProjectManagementWeb.csproj|solutionrelative:projectmanagementweb\\controllers\\qldacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{93BC2F54-ED7C-4AEE-B4EF-CED80C974510}|ProjectManagementWeb\\ProjectManagementWeb.csproj|d:\\it\\nam3\\hk1\\cnpmnc\\webqlda\\projectmanagementweb\\projectmanagementweb\\content\\css\\admin\\cssadmin.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{93BC2F54-ED7C-4AEE-B4EF-CED80C974510}|ProjectManagementWeb\\ProjectManagementWeb.csproj|solutionrelative:projectmanagementweb\\content\\css\\admin\\cssadmin.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+      "AbsoluteMoniker": "D:0:0:{93BC2F54-ED7C-4AEE-B4EF-CED80C974510}|ProjectManagementWeb\\ProjectManagementWeb.csproj|d:\\it\\nam3\\hk1\\cnpmnc\\webqlda\\projectmanagementweb\\projectmanagementweb\\models\\nguoidung.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{93BC2F54-ED7C-4AEE-B4EF-CED80C974510}|ProjectManagementWeb\\ProjectManagementWeb.csproj|solutionrelative:projectmanagementweb\\models\\nguoidung.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -46,110 +46,45 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 8,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "CSSAdmin.css",
-              "DocumentMoniker": "D:\\IT\\nam3\\HK1\\CNPMNC\\WebQLDA\\ProjectManagementWeb\\ProjectManagementWeb\\Content\\css\\Admin\\CSSAdmin.css",
-              "RelativeDocumentMoniker": "ProjectManagementWeb\\Content\\css\\Admin\\CSSAdmin.css",
-              "ToolTip": "D:\\IT\\nam3\\HK1\\CNPMNC\\WebQLDA\\ProjectManagementWeb\\ProjectManagementWeb\\Content\\css\\Admin\\CSSAdmin.css",
-              "RelativeToolTip": "ProjectManagementWeb\\Content\\css\\Admin\\CSSAdmin.css",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAQAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2024-11-04T16:52:35.235Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "DuAn.cs",
-              "DocumentMoniker": "D:\\IT\\nam3\\HK1\\CNPMNC\\WebQLDA\\ProjectManagementWeb\\ProjectManagementWeb\\Models\\DuAn.cs",
-              "RelativeDocumentMoniker": "ProjectManagementWeb\\Models\\DuAn.cs",
-              "ToolTip": "D:\\IT\\nam3\\HK1\\CNPMNC\\WebQLDA\\ProjectManagementWeb\\ProjectManagementWeb\\Models\\DuAn.cs",
-              "RelativeToolTip": "ProjectManagementWeb\\Models\\DuAn.cs",
-              "ViewState": "AgIAABYAAAAAAAAAAAAUwCUAAAAEAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-04T16:42:50.096Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "CSSViewAdmin.css",
-              "DocumentMoniker": "D:\\IT\\nam3\\HK1\\CNPMNC\\WebQLDA\\ProjectManagementWeb\\ProjectManagementWeb\\Content\\css\\Admin\\CSSViewAdmin.css",
-              "RelativeDocumentMoniker": "ProjectManagementWeb\\Content\\css\\Admin\\CSSViewAdmin.css",
-              "ToolTip": "D:\\IT\\nam3\\HK1\\CNPMNC\\WebQLDA\\ProjectManagementWeb\\ProjectManagementWeb\\Content\\css\\Admin\\CSSViewAdmin.css",
-              "RelativeToolTip": "ProjectManagementWeb\\Content\\css\\Admin\\CSSViewAdmin.css",
-              "ViewState": "AgIAAC4AAAAAAAAAAAAgwEMAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2024-11-04T16:38:55.535Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "_LayoutAdmin.cshtml",
-              "DocumentMoniker": "D:\\IT\\nam3\\HK1\\CNPMNC\\WebQLDA\\ProjectManagementWeb\\ProjectManagementWeb\\Views\\Shared\\_LayoutAdmin.cshtml",
-              "RelativeDocumentMoniker": "ProjectManagementWeb\\Views\\Shared\\_LayoutAdmin.cshtml",
-              "ToolTip": "D:\\IT\\nam3\\HK1\\CNPMNC\\WebQLDA\\ProjectManagementWeb\\ProjectManagementWeb\\Views\\Shared\\_LayoutAdmin.cshtml",
-              "RelativeToolTip": "ProjectManagementWeb\\Views\\Shared\\_LayoutAdmin.cshtml",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAYwBwAAABIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-04T16:21:47.222Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Delete.cshtml",
-              "DocumentMoniker": "D:\\IT\\nam3\\HK1\\CNPMNC\\WebQLDA\\ProjectManagementWeb\\ProjectManagementWeb\\Views\\QLDA\\Delete.cshtml",
-              "RelativeDocumentMoniker": "ProjectManagementWeb\\Views\\QLDA\\Delete.cshtml",
-              "ToolTip": "D:\\IT\\nam3\\HK1\\CNPMNC\\WebQLDA\\ProjectManagementWeb\\ProjectManagementWeb\\Views\\QLDA\\Delete.cshtml",
-              "RelativeToolTip": "ProjectManagementWeb\\Views\\QLDA\\Delete.cshtml",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAgwBMAAAByAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-04T16:21:05.206Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Edit.cshtml",
-              "DocumentMoniker": "D:\\IT\\nam3\\HK1\\CNPMNC\\WebQLDA\\ProjectManagementWeb\\ProjectManagementWeb\\Views\\QLDA\\Edit.cshtml",
-              "RelativeDocumentMoniker": "ProjectManagementWeb\\Views\\QLDA\\Edit.cshtml",
-              "ToolTip": "D:\\IT\\nam3\\HK1\\CNPMNC\\WebQLDA\\ProjectManagementWeb\\ProjectManagementWeb\\Views\\QLDA\\Edit.cshtml",
-              "RelativeToolTip": "ProjectManagementWeb\\Views\\QLDA\\Edit.cshtml",
-              "ViewState": "AgIAADMAAAAAAAAAAAAgwEAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-04T16:20:41.119Z",
+              "Title": "JSTaoDuAn.js",
+              "DocumentMoniker": "D:\\IT\\nam3\\HK1\\CNPMNC\\WebQLDA\\ProjectManagementWeb\\ProjectManagementWeb\\Content\\JS\\JSTaoDuAn.js",
+              "RelativeDocumentMoniker": "ProjectManagementWeb\\Content\\JS\\JSTaoDuAn.js",
+              "ToolTip": "D:\\IT\\nam3\\HK1\\CNPMNC\\WebQLDA\\ProjectManagementWeb\\ProjectManagementWeb\\Content\\JS\\JSTaoDuAn.js",
+              "RelativeToolTip": "ProjectManagementWeb\\Content\\JS\\JSTaoDuAn.js",
+              "ViewState": "AgIAAFQAAAAAAAAAAAAAAGQAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2024-11-05T13:42:07.609Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "Create.cshtml",
-              "DocumentMoniker": "D:\\IT\\nam3\\HK1\\CNPMNC\\WebQLDA\\ProjectManagementWeb\\ProjectManagementWeb\\Views\\QLDA\\Create.cshtml",
-              "RelativeDocumentMoniker": "ProjectManagementWeb\\Views\\QLDA\\Create.cshtml",
-              "ToolTip": "D:\\IT\\nam3\\HK1\\CNPMNC\\WebQLDA\\ProjectManagementWeb\\ProjectManagementWeb\\Views\\QLDA\\Create.cshtml",
-              "RelativeToolTip": "ProjectManagementWeb\\Views\\QLDA\\Create.cshtml",
-              "ViewState": "AgIAADYAAAAAAAAAAAAAAEMAAAAOAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-04T16:18:23.459Z",
+              "Title": "DuAn.cs",
+              "DocumentMoniker": "D:\\IT\\nam3\\HK1\\CNPMNC\\WebQLDA\\ProjectManagementWeb\\ProjectManagementWeb\\Models\\DuAn.cs",
+              "RelativeDocumentMoniker": "ProjectManagementWeb\\Models\\DuAn.cs",
+              "ToolTip": "D:\\IT\\nam3\\HK1\\CNPMNC\\WebQLDA\\ProjectManagementWeb\\ProjectManagementWeb\\Models\\DuAn.cs",
+              "RelativeToolTip": "ProjectManagementWeb\\Models\\DuAn.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAIwDgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-05T13:36:37.056Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "QLDuAn.cshtml",
-              "DocumentMoniker": "D:\\IT\\nam3\\HK1\\CNPMNC\\WebQLDA\\ProjectManagementWeb\\ProjectManagementWeb\\Views\\QLDA\\QLDuAn.cshtml",
-              "RelativeDocumentMoniker": "ProjectManagementWeb\\Views\\QLDA\\QLDuAn.cshtml",
-              "ToolTip": "D:\\IT\\nam3\\HK1\\CNPMNC\\WebQLDA\\ProjectManagementWeb\\ProjectManagementWeb\\Views\\QLDA\\QLDuAn.cshtml",
-              "RelativeToolTip": "ProjectManagementWeb\\Views\\QLDA\\QLDuAn.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAeAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-04T15:13:40.224Z",
+              "DocumentIndex": 5,
+              "Title": "UserController.cs",
+              "DocumentMoniker": "D:\\IT\\nam3\\HK1\\CNPMNC\\WebQLDA\\ProjectManagementWeb\\ProjectManagementWeb\\Controllers\\UserController.cs",
+              "RelativeDocumentMoniker": "ProjectManagementWeb\\Controllers\\UserController.cs",
+              "ToolTip": "D:\\IT\\nam3\\HK1\\CNPMNC\\WebQLDA\\ProjectManagementWeb\\ProjectManagementWeb\\Controllers\\UserController.cs",
+              "RelativeToolTip": "ProjectManagementWeb\\Controllers\\UserController.cs",
+              "ViewState": "AgIAADAAAAAAAAAAAAAIwGUAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-05T13:33:21.836Z",
               "EditorCaption": ""
             },
             {
@@ -160,9 +95,74 @@
               "RelativeDocumentMoniker": "ProjectManagementWeb\\Controllers\\QLDAController.cs",
               "ToolTip": "D:\\IT\\nam3\\HK1\\CNPMNC\\WebQLDA\\ProjectManagementWeb\\ProjectManagementWeb\\Controllers\\QLDAController.cs",
               "RelativeToolTip": "ProjectManagementWeb\\Controllers\\QLDAController.cs",
-              "ViewState": "AgIAABIAAAAAAAAAAAAAAB8AAAAjAAAAAAAAAA==",
+              "ViewState": "AgIAACQAAAAAAAAAAAAAAC8AAAAoAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-04T15:04:06.783Z",
+              "WhenOpened": "2024-11-05T13:33:06.042Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Register.cshtml",
+              "DocumentMoniker": "D:\\IT\\nam3\\HK1\\CNPMNC\\WebQLDA\\ProjectManagementWeb\\ProjectManagementWeb\\Views\\Relog\\Register.cshtml",
+              "RelativeDocumentMoniker": "ProjectManagementWeb\\Views\\Relog\\Register.cshtml",
+              "ToolTip": "D:\\IT\\nam3\\HK1\\CNPMNC\\WebQLDA\\ProjectManagementWeb\\ProjectManagementWeb\\Views\\Relog\\Register.cshtml",
+              "RelativeToolTip": "ProjectManagementWeb\\Views\\Relog\\Register.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAABHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-05T13:32:56.179Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "NguoiDung.cs",
+              "DocumentMoniker": "D:\\IT\\nam3\\HK1\\CNPMNC\\WebQLDA\\ProjectManagementWeb\\ProjectManagementWeb\\Models\\NguoiDung.cs",
+              "RelativeDocumentMoniker": "ProjectManagementWeb\\Models\\NguoiDung.cs",
+              "ToolTip": "D:\\IT\\nam3\\HK1\\CNPMNC\\WebQLDA\\ProjectManagementWeb\\ProjectManagementWeb\\Models\\NguoiDung.cs",
+              "RelativeToolTip": "ProjectManagementWeb\\Models\\NguoiDung.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-05T13:32:13.809Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "RelogController.cs",
+              "DocumentMoniker": "D:\\IT\\nam3\\HK1\\CNPMNC\\WebQLDA\\ProjectManagementWeb\\ProjectManagementWeb\\Controllers\\RelogController.cs",
+              "RelativeDocumentMoniker": "ProjectManagementWeb\\Controllers\\RelogController.cs",
+              "ToolTip": "D:\\IT\\nam3\\HK1\\CNPMNC\\WebQLDA\\ProjectManagementWeb\\ProjectManagementWeb\\Controllers\\RelogController.cs",
+              "RelativeToolTip": "ProjectManagementWeb\\Controllers\\RelogController.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAAABcAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-05T13:31:51.387Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "QLDuAn.cshtml",
+              "DocumentMoniker": "D:\\IT\\nam3\\HK1\\CNPMNC\\WebQLDA\\ProjectManagementWeb\\ProjectManagementWeb\\Views\\QLDA\\QLDuAn.cshtml",
+              "RelativeDocumentMoniker": "ProjectManagementWeb\\Views\\QLDA\\QLDuAn.cshtml",
+              "ToolTip": "D:\\IT\\nam3\\HK1\\CNPMNC\\WebQLDA\\ProjectManagementWeb\\ProjectManagementWeb\\Views\\QLDA\\QLDuAn.cshtml",
+              "RelativeToolTip": "ProjectManagementWeb\\Views\\QLDA\\QLDuAn.cshtml",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAACAAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-05T13:22:33.993Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "DuAn.cshtml",
+              "DocumentMoniker": "D:\\IT\\nam3\\HK1\\CNPMNC\\WebQLDA\\ProjectManagementWeb\\ProjectManagementWeb\\Views\\User\\DuAn.cshtml",
+              "RelativeDocumentMoniker": "ProjectManagementWeb\\Views\\User\\DuAn.cshtml",
+              "ToolTip": "D:\\IT\\nam3\\HK1\\CNPMNC\\WebQLDA\\ProjectManagementWeb\\ProjectManagementWeb\\Views\\User\\DuAn.cshtml",
+              "RelativeToolTip": "ProjectManagementWeb\\Views\\User\\DuAn.cshtml",
+              "ViewState": "AgIAAFIAAAAAAAAAAAAYwGcAAABPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-05T13:22:31.789Z",
               "EditorCaption": ""
             }
           ]

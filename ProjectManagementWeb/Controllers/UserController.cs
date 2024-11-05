@@ -39,7 +39,7 @@ namespace ProjectManagementWeb.Controllers
             return View(listDuAn);
         }
         [HttpPost]
-        public JsonResult CreateDuAn(string tenDuAn, string mauGradient, string quyenXem)
+        public JsonResult CreateDuAn(string tenDuAn, string mauGradient, string quyenXem, DateTime? ngayKetThuc, decimal nganSach)
         {
             if (string.IsNullOrEmpty(tenDuAn))
             {
@@ -53,7 +53,9 @@ namespace ProjectManagementWeb.Controllers
                     TenDuAn = tenDuAn,
                     MauGradient = mauGradient,
                     QuyenXem = quyenXem,
-                    NgayBatDau = DateTime.Now
+                    NgayBatDau = DateTime.Now,
+                    NgayKetThuc = ngayKetThuc,
+                    NganSach = nganSach
                 };
 
                 db.DuAn.Add(newDuAn);

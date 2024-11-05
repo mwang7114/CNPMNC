@@ -81,12 +81,15 @@ function createNewBoard(projectTitle, backgroundColor) {
 document.getElementById("createProjectConfirm").onclick = function () {
     const projectTitle = document.getElementById("projectTitle").value.trim();
     const backgroundColor = document.getElementById("createProjectModal").getAttribute("data-background") || "linear-gradient(90deg, #56ab2f, #a8e063)";
-
-    // Thay đổi cách lấy quyền xem từ select option
     const visibility = document.getElementById("projectVisibility").value;
 
-    if (projectTitle === "") {
-        $('#customAlert').show(); // Hiện thông báo nếu tiêu đề trống
+    // Lấy ngày bắt đầu, ngày kết thúc và ngân sách
+    const startDate = document.getElementById("startDate").value;
+    const endDate = document.getElementById("endDate").value;
+    const budget = document.getElementById("budget").value;
+
+    if (projectTitle === "" || startDate === "" || endDate === "" || budget === "") {
+        $('#customAlert').show(); // Hiển thị cảnh báo nếu thiếu thông tin
         return;
     }
 
@@ -96,7 +99,10 @@ document.getElementById("createProjectConfirm").onclick = function () {
         data: {
             tenDuAn: projectTitle,
             mauGradient: backgroundColor,
-            quyenXem: visibility
+            quyenXem: visibility,
+            ngayBatDau: startDate,
+            ngayKetThuc: endDate,
+            nganSach: budget
         },
         success: function (response) {
             if (response.success) {
@@ -129,7 +135,10 @@ function createProjectFromSidebar() {
             data: {
                 tenDuAn: projectTitle,
                 mauGradient: backgroundColor,
-                quyenXem: visibility
+                quyenXem: visibility,
+                ngayBatDau: new Date().toISOString().split("T")[0], // Sử dụng ngày hiện tại nếu không có giá trị
+                ngayKetThuc: new Date().toISOString().split("T")[0],
+                nganSach: 0 // Mặc định là 0 nếu không có giá trị
             },
             success: function (response) {
                 if (response.success) {
@@ -247,64 +256,18 @@ function initCalendarEvents() {
         renderCalendar();
     });
 
-    document.querySelector('.week-view-btn')?.addEventListener('click', () => {
-        currentView = 'week';
-        renderCalendar();
-    });
-
     document.querySelector('.month-view-btn')?.addEventListener('click', () => {
         currentView = 'month';
         renderCalendar();
     });
 
-    document.querySelector('.today-btn')?.addEventListener('click', () => {
-        currentDate = new Date();
+    document.querySelector('.week-view-btn')?.addEventListener('click', () => {
+        currentView = 'week';
         renderCalendar();
     });
-
-    renderCalendar();
 }
 
-// Khởi tạo sự kiện khi tải trang
-$(document).ready(function () {
-    $(".section3").click(function (e) {
-        e.preventDefault();
-        var url = $(this).attr("href");
-
-        $.ajax({
-            url: url,
-            type: "GET",
-            success: function (data) {
-                $('.content-main').html(data);
-                initCalendarEvents();
-            },
-            error: function () {
-                alert("Có lỗi xảy ra, vui lòng thử lại!");
-            }
-        });
-    });
-
+document.addEventListener('DOMContentLoaded', () => {
+    renderCalendar();
     initCalendarEvents();
 });
-
-// Kiểm tra và xác thực ngày
-document.getElementById("startDate").addEventListener("blur", validateDate);
-document.getElementById("endDate").addEventListener("blur", validateDate);
-
-function validateDate(event) {
-    const input = event.target;
-    const datePattern = /^\d{4}-\d{2}-\d{2}$/; // Định dạng yyyy-mm-dd
-    const [year, month, day] = input.value.split('-');
-
-    // Kiểm tra định dạng và số lượng ký tự
-    if (
-        !input.value.match(datePattern) ||            // Kiểm tra định dạng yyyy-mm-dd
-        input.value.length !== 10 ||                  // Đảm bảo chỉ có 10 ký tự
-        parseInt(year) < 1000 || parseInt(year) > 9999 || // Kiểm tra số ký tự năm
-        parseInt(month) < 1 || parseInt(month) > 12 || // Kiểm tra tháng hợp lệ
-        parseInt(day) < 1 || parseInt(day) > 31       // Kiểm tra ngày hợp lệ
-    ) {
-        alert("Vui lòng nhập ngày theo định dạng yyyy-mm-dd (VD: 2024-10-31).");
-        input.focus();
-    }
-}
