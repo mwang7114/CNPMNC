@@ -33,7 +33,7 @@
             <tr>
                 <td>@item.DuAnID</td>
                 <td>@item.TenDuAn</td>
-                <td>@item.NgayBatDau.ToString("dd/MM/yyyy")</td>
+                <td>@(item.NgayBatDau.HasValue ? item.NgayBatDau.Value.ToString("dd/MM/yyyy") : string.Empty)</td>
                 <td>@(item.NgayKetThuc.HasValue ? item.NgayKetThuc.Value.ToString("dd/MM/yyyy") : string.Empty)</td>
                 <td>@item.NganSach</td>
                 <td>@item.QuyenXem</td>

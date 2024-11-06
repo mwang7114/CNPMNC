@@ -14,7 +14,7 @@
         <dd>@Html.DisplayFor(model => model.TenDuAn)</dd>
 
         <dt>Ngày Bắt Đầu</dt>
-        <dd>@Model.NgayBatDau.ToString("dd/MM/yyyy")</dd>
+        <dd>@(Model.NgayBatDau.HasValue ? Model.NgayBatDau.Value.ToString("dd/MM/yyyy") : "Không xác định")</dd>
 
         <dt>Ngày Kết Thúc</dt>
         <dd>@(Model.NgayKetThuc.HasValue ? Model.NgayKetThuc.Value.ToString("dd/MM/yyyy") : "Không xác định")</dd>

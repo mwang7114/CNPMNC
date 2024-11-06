@@ -29,7 +29,7 @@ namespace ProjectManagementWeb.Models
     
         public int DuAnID { get; set; }
         public string TenDuAn { get; set; }
-        public System.DateTime NgayBatDau { get; set; }
+        public Nullable <System.DateTime> NgayBatDau { get; set; }
         public Nullable<System.DateTime> NgayKetThuc { get; set; }
         public decimal NganSach { get; set; }
         public string MauGradient { get; set; }

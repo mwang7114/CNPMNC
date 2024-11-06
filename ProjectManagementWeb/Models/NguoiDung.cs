@@ -11,6 +11,10 @@ namespace ProjectManagementWeb.Models
 {
     using System;
     using System.Collections.Generic;
+    using System.ComponentModel;
+    using System.ComponentModel.DataAnnotations;
+    using System.ComponentModel.DataAnnotations.Schema;
+
 
 
     public partial class NguoiDung
@@ -26,19 +30,34 @@ namespace ProjectManagementWeb.Models
             this.ThanhVienDuAn = new HashSet<ThanhVienDuAn>();
             this.ThongBao = new HashSet<ThongBao>();
         }
-
+        [DisplayName("ID")]
         public int NguoiDungID { get; set; }
 
+        [DisplayName("Account")]
+        [Required(ErrorMessage = "Not Empty")]
         public string TenDangNhap { get; set; }
 
+        [DisplayName("Password")]
+        [Required(ErrorMessage = "Not Empty")]
         public string MatKhau { get; set; }
 
+        [NotMapped]
+        [DisplayName("Confirm Password")]
+        [Compare("MatKhau", ErrorMessage = "Mật khẩu không khớp.")]
         public string NhapLaiMatKhau { get; set; }
 
+        [DisplayName("Full name")]
+        [Required(ErrorMessage = "Not Empty")]
         public string HoTen { get; set; }
 
+        [DisplayName("Email")]
+        [Required(ErrorMessage = "Not Empty")]
         public string Email { get; set; }
+
+        [DisplayName("Role")]
+        [Required(ErrorMessage = "Not Empty")]
         public string VaiTro { get; set; }
+
         public System.DateTime NgayTao { get; set; }
         public Nullable<System.DateTime> LanDangNhapCuoi { get; set; }
     
